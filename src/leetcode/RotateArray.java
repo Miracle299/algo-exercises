@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class RotateArray {
     public static void rotate(int[] nums, int k) {
         int N = nums.length;
+        k %= N;
         revert(nums, 0, N - 1);
         revert(nums, 0, k - 1);
         revert(nums, k, N - 1);
