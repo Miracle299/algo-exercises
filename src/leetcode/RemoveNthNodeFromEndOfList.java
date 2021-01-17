@@ -1,6 +1,5 @@
 package leetcode;
 
-
 class ListNode {
     int val;
     ListNode next;
@@ -15,6 +14,14 @@ class ListNode {
     ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+            "val=" + val +
+            ", next=" + next +
+            '}';
     }
 }
 
@@ -34,7 +41,6 @@ public class RemoveNthNodeFromEndOfList {
         return temp.next;
     }
 
-
     public int depth(ListNode head, int depth) {
         if (head == null) {
             return depth;
@@ -44,6 +50,6 @@ public class RemoveNthNodeFromEndOfList {
 
     public static void main(String[] args) {
         new RemoveNthNodeFromEndOfList()
-                .removeNthFromEnd(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))), 2);
+            .removeNthFromEnd(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))), 2);
     }
 }
